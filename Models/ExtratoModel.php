@@ -1,6 +1,6 @@
 <?php 
   namespace Models;
-  class ExtratoModel extends Model {
+  class ExtratoModel {
     public function __construct(){
       
     }

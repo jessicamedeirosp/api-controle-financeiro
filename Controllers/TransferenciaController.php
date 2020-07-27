@@ -1,7 +1,7 @@
 <?php 
 namespace Controllers;
 
-class TransferenciaController extends Controller{
+class TransferenciaController {
   public function executar() {
     $parametros = array(
       'cpf' => $_POST['cpf'],

@@ -1,7 +1,7 @@
 <?php 
 namespace Controllers;
 
-class DebitoController extends Controller{
+class DebitoController {
   public function executar() {
     $parametros = array(
       'cpf' => $_POST['cpf'],

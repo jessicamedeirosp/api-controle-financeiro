@@ -1,7 +1,7 @@
 <?php 
 namespace Controllers;
 
-class ExtratoController extends Controller{
+class ExtratoController {
   public function executar() {
     $cpf = $_POST['cpf'];
     if (strlen($cpf) == 11){

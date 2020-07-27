@@ -1,6 +1,6 @@
 <?php 
   namespace Models;
-  class SaldoModel extends Model {
+  class SaldoModel {
     public function __construct(){
       
     }
