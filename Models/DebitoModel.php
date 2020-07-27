@@ -1,14 +1,11 @@
 <?php 
   namespace Models;
-  class DebitoModel {
-    public function __construct(){
-      
-    }
+  class DebitoModel extends Model {
 
     public static function debitarValor($parametros) {      
       $conexao = ConexaoModel::getDb();
 
-      $valor = floatval($parametros['valor']);
+      $valor = floatval($parametros['valor']);     
       if($valor > 0) $valor = $valor*-1;
 
       $preparar = $conexao->prepare("CALL debitarValor('".$parametros['cpf']."', $valor);");

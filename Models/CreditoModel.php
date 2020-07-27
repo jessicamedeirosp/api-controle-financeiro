@@ -1,9 +1,6 @@
 <?php 
   namespace Models;
-  class CreditoModel {
-    public function __construct(){
-      
-    }
+  class CreditoModel extends Model {
 
     public static function creditarValor($parametros) {      
       $conexao = ConexaoModel::getDb(); 

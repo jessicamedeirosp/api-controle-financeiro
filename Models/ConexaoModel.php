@@ -3,9 +3,7 @@ namespace Models;
 class ConexaoModel {
   public static $conexao;
  
-  private function __construct() {
-
-  }
+  private function __construct() {}
 
   public static function getDb() {
     try { 

@@ -1,16 +1,15 @@
 <?php 
 namespace Controllers;
 
-class TransferenciaController {
+class TransferenciaController extends Controller {
   public function executar() {
     $parametros = array(
       'cpf' => $_POST['cpf'],
       'cpf_destinatario' => $_POST['cpf_destinatario'],
       'valor' => $_POST['valor']
     );
-      
-    $resultado = \Models\TransferenciaModel::transferirValor($parametros);
-    return json_encode(array('dados' => $resultado));    
+    return json_encode(array('dados' => 
+      \Models\TransferenciaModel::transferirValor($parametros)));    
     
   }
 }

@@ -1,13 +1,10 @@
 <?php 
   namespace Models;
-  class SaldoModel {
-    public function __construct(){
-      
-    }
+  class SaldoModel extends Model {
 
-    public static function calcularSaldo($cpf) {
+    public static function calcularSaldo($parametros) {
       $conexao = ConexaoModel::getDb();
-      $preparar = $conexao->prepare("SELECT SUM(valor) as saldo FROM extrato where cpf=$cpf");
+      $preparar = $conexao->prepare("SELECT SUM(valor) as saldo FROM extrato where cpf=".$parametros['cpf']."");
       $resultado = "";
       if ($preparar->execute()) {
         while($elemento = $preparar->fetch(\PDO::FETCH_ASSOC)) {

@@ -1,9 +1,6 @@
 <?php 
   namespace Models;
-  class TransferenciaModel {
-    public function __construct(){
-      
-    }
+  class TransferenciaModel extends Model {
 
     public static function transferirValor($parametros) {      
       $conexao = ConexaoModel::getDb();

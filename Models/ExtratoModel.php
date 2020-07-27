@@ -1,13 +1,10 @@
 <?php 
   namespace Models;
-  class ExtratoModel {
-    public function __construct(){
-      
-    }
+  class ExtratoModel extends Model {
 
-    public static function buscaExtrato($cpf) {
+    public static function buscaExtrato($parametros) {
       $conexao = ConexaoModel::getDb();
-      $preparar = $conexao->prepare("SELECT * FROM extrato where cpf = $cpf;");
+      $preparar = $conexao->prepare("SELECT * FROM extrato where cpf = ".$parametros['cpf'].";");
       $resultado = array();
       if ($preparar->execute()) {
         while($elemento = $preparar->fetchObject(self::class)) {
