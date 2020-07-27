@@ -1,5 +1,7 @@
 <?php 
 // header('Content-type: application/json; charset=utf-8');
+define('INCLUDE_PATH','http://127.0.0.1:8078/');
+define('INCLUDE_PATH_FULL','http://127.0.0.1:8078/Views/pages/');
 class Application {
   public function executar() {  
     
@@ -17,7 +19,7 @@ class Application {
     if(file_exists('Controllers/'.$url.'.php')){              
       $className = 'Controllers\\'.$url;
       $Controller = new $className();
-      $Controller->executar();
+      echo $Controller->executar();
     } else{
       die('Controller não existe');
        // return json_encode(array('status' => 'Erro', 'dados' => array('message' => 'Controller não existe')));
