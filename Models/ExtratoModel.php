@@ -1,7 +1,6 @@
 <?php 
   namespace Models;
   class ExtratoModel extends Model {
-    private $parametros;
     public function __construct(){
       
     }
@@ -17,9 +16,11 @@
       }
       if (count($resultado) > 0) {
         return $resultado;
+      } else {
+        return array('status' => 'sucesso','mensagem' => 'Nenhum elemento encontado' );
       }
 
-      return array('status' => 'alerta','mensagem' => 'Nenhum elemento encontado' );
+      return array('status' => 'erro','mensagem' => 'Erro ao buscar Extrato' );
     } 
   }
 ?>
