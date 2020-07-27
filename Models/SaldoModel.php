@@ -16,12 +16,12 @@
       }
       if (count($resultado) > 0 ) {
         if($resultado['saldo'] == null) {
-          return array('saldo' => '0');
-        } else{
-          return $resultado;
+          return array(array('saldo' => '0'));
+        } else{        
+          return array($resultado);
         }
       }
-      return array('status' => 'erro','mensagem' => 'Erro ao calcular saldo' );
+      return array('mensagem' => 'Erro ao calcular saldo' );
 
     } 
   }

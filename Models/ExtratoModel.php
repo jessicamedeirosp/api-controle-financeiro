@@ -14,13 +14,13 @@
           $resultado[] = $elemento;
         }
       }
-      if (count($resultado) > 0) {
+      if (count($resultado) > 0) {        
         return $resultado;
       } else {
-        return array('status' => 'sucesso','mensagem' => 'Nenhum elemento encontado' );
+        return array('mensagem' => 'Nenhum elemento encontado' );
       }
 
-      return array('status' => 'erro','mensagem' => 'Erro ao buscar Extrato' );
+      return array('status' => 'Erro','mensagem' => 'Erro ao buscar Extrato' );
     } 
   }
 ?>

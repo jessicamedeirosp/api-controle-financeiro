@@ -6,7 +6,7 @@ class ExtratoController extends Controller{
     $cpf = $_POST['cpf'];
     if (strlen($cpf) == 11){
       $resultado = \Models\ExtratoModel::buscaExtrato($cpf);
-      return json_encode(array('status' => 'Erro', 'dados' => $resultado));    
+      return json_encode(array('dados' => $resultado));    
     }
     
   }
