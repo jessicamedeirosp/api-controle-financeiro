@@ -1,3 +1,9 @@
 <?php 
-  echo 'Hello World';
+
+$autoload = function($class) {
+  include($class.'.php');
+};
+spl_autoload_register($autoload);
+$app = new Application();
+$app->executar();
 ?>
