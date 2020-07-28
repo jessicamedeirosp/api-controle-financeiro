@@ -1,6 +1,6 @@
 <?php 
   namespace Models;
-  class DebitoModel extends Model {
+  class DebitoModel {
 
     public static function debitarValor($parametros) {      
       $conexao = ConexaoModel::getDb();
@@ -19,7 +19,7 @@
       if (count($resultado) > 0 ) 
         return array($resultado);
 
-      return array('status' => 'Erro','mensagem' => 'Erro ao debitar valor' );
+      return array('mensagem' => 'Erro ao debitar valor' );
 
     } 
   }

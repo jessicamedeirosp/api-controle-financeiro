@@ -1,6 +1,6 @@
 <?php 
   namespace Models;
-  class ExtratoModel extends Model {
+  class ExtratoModel  {
 
     public static function buscaExtrato($parametros) {
       $conexao = ConexaoModel::getDb();
@@ -14,10 +14,10 @@
       if (count($resultado) > 0) {        
         return $resultado;
       } else {
-        return array('mensagem' => 'Nenhum elemento encontado' );
+        return array(array('mensagem' => 'Nenhum elemento encontado'));
       }
 
-      return array('status' => 'Erro','mensagem' => 'Erro ao buscar Extrato' );
+      return array('mensagem' => 'Erro ao buscar Extrato' );
     } 
   }
 ?>

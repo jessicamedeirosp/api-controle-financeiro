@@ -1,6 +1,6 @@
 <?php 
   namespace Models;
-  class SaldoModel extends Model {
+  class SaldoModel {
 
     public static function calcularSaldo($parametros) {
       $conexao = ConexaoModel::getDb();

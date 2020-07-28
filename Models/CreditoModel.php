@@ -1,6 +1,6 @@
 <?php 
   namespace Models;
-  class CreditoModel extends Model {
+  class CreditoModel {
 
     public static function creditarValor($parametros) {      
       $conexao = ConexaoModel::getDb(); 
@@ -15,7 +15,7 @@
       if (count($resultado) > 0 ) 
         return array($resultado);
       
-      return array('status' => 'Erro','mensagem' => 'Erro ao debitar valor' );
+      return array('mensagem' => 'Erro ao debitar valor' );
 
     } 
   }

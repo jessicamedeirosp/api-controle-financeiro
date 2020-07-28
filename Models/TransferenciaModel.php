@@ -1,6 +1,6 @@
 <?php 
   namespace Models;
-  class TransferenciaModel extends Model {
+  class TransferenciaModel {
 
     public static function transferirValor($parametros) {      
       $conexao = ConexaoModel::getDb();
@@ -19,7 +19,7 @@
       if (count($resultado) > 0 )
         return array($resultado);
 
-      return array('status' => 'Erro','mensagem' => 'Erro ao debitar valor' );
+      return array('mensagem' => 'Erro ao debitar valor' );
 
     } 
   }
