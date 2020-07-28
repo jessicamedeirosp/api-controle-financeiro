@@ -8,9 +8,9 @@ class ConexaoModel {
   public static function getDb() {
     try { 
       if (!isset(self::$conexao)) {       
-          $usuario = 'jessmede_apiphp';
+          $usuario = 'root';
           $senha = '5@j4F#45';
-          self::$conexao = new \PDO('mysql:host=216.172.172.89;dbname=jessmede_controle_financeiro;',$usuario,$senha);
+          self::$conexao = new \PDO('mysql:host=localhost;dbname=jessmede_controle_financeiro;',$usuario,$senha);
           self::$conexao->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
           self::$conexao->setAttribute(\PDO::ATTR_ORACLE_NULLS, \PDO::NULL_EMPTY_STRING);
           self::$conexao->exec('set names utf8');

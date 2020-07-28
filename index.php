@@ -1,5 +1,4 @@
 <?php 
-
 $autoload = function($class) {
   include($class.'.php');
 };
