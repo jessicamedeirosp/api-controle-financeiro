@@ -5,6 +5,10 @@
 * XAMP ou similares
 * Insomnia ou Postman (para testar as requisições)
 
+## LINUX
+Caso utilize linux segue tutorial para configurar ambiente PHP https://netbeans.org/kb/docs/php/configure-php-environment-ubuntu_pt_BR.html 
+
+
 **OBS:** O .htaccess e web.config (iis) são responsável pela url amigável
 
 ## CRIAR O BANCO DE DADOS
